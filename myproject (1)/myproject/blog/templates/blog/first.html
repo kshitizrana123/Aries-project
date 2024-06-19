@@ -1,0 +1,57 @@
+{% extends "blog/base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<!-- ADDITIONAL STYLING -->
+
+<style>
+  body {
+    background-color: #f0f0f0;
+  }
+</style>
+
+<div>
+    
+    <!-- Page Hero-->
+    <section class="page-header page-header-light bg-white mt-4 container">
+      <div class="page-header-content pt-5">
+          <div class="container">
+              <div class="row align-items-center">
+                  <div class="col-lg-6" data-aos="fade-up">
+                      <h1 class="page-header-title font-weight-bold"><a href="{% url 'Pheonix' %}">PHEONIX </a>: <br> Grow, Share and Build </h1>
+                      <br>
+                      <p class="page-header-text mb-5">
+                        
+                        {% if user.is_authenticated %}
+                        platform for interactive development and group discussion 
+                        {% else %}
+                        Sign up and engage with individuals  
+                        <br>Create an account today and contribute to the change
+                        {% endif %}
+                        <br>
+                        Developed by <a target="_blank" href="https://github.com/kshitizrana123">Kshitiz Rana</a>
+                        <br>
+                        <br> Key Features
+                        <br> 1. User Authentication and Profiles <br> &emsp; - Build your profile, follow others, and make friends 
+                        <br> 2. Messaging and Chat <br> &emsp; - Enjoy real-time private chatting
+                        <br> 3. News Feed and Content Sharing <br>&emsp; - Share posts including photos and videos <br>&emsp; - Like, share, comment on your friends' posts
+                      </p>
+                      {% if user.is_authenticated %}
+                        <a class="btn btn-lg btn-primary font-weight-bold mr-2 rounded-pill px-4 py-2" href="{% url 'blog-home' %}">Home</a>
+                        {% else %}
+                        <a class="btn btn-lg btn-primary font-weight-bold mr-2 rounded-pill px-4 py-2" href="{% url 'register' %}">REGISTER</a>
+                        <a class="btn btn-lg btn-primary-soft text-primary font-weight-bold" href="{% url 'account_login' %}">LOGIN</a>
+                        {% endif %}
+                  </div>
+                  <div class="col-lg-6 d-none d-lg-block" data-aos="fade-up" data-aos-delay="100"><img class="img-fluid" src="/static/blog/images/pheonix.png" /></div>
+              </div>
+          </div>
+      </div>
+      <br>
+    </section>
+
+</div>
+
+{% endblock %}
