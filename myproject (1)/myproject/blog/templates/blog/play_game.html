@@ -1,0 +1,13 @@
+<!-- game/templates/game/play_game.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <h1>Permutations Battle</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Play</button>
+    </form>
+    <div id="result"></div>  <!-- Div to display game result -->
+</body>
+</html>

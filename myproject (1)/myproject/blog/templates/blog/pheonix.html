@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Features</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'blog/styles.css' %}">
+</head>
+<body>
+<div class="navbar-nav">
+<a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a><br>
+<a class="nav-item nav-link" href="/">?</a>
+</div>
+    <div class="container">
+        <div class="developer-info">
+            <p>Developed by <a target="_blank" href="https://github.com/kshitizrana123">Kshitiz Rana</a></p>
+        </div>
+        <br>
+        <div class="key-features">
+            <h2>Key Features</h2>
+            <ul>
+                <li>
+                    <strong>User Authentication and Profiles</strong>
+                    <p>Build your profile, follow others, and make friends</p>
+                </li>
+                <li>
+                    <strong>Messaging and Chat</strong>
+                    <p>Enjoy real-time private chatting</p>
+                </li>
+                <li>
+                    <strong>News Feed and Content Sharing</strong>
+                    <p>Share posts including photos and videos</p>
+                    <p>Like, share, comment on your friends' posts</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
